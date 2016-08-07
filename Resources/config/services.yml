@@ -1,0 +1,8 @@
+parameters:
+    router.class: Glory\Bundle\RoutingBundle\Routing\Router
+services:
+    glory_routalias.event_listener:
+        class: Glory\Bundle\RoutingBundle\EventListener\RouterAliasListener
+        arguments: ['@router']
+        tags:
+            -  { name: kernel.event_subscriber }
